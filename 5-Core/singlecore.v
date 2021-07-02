@@ -192,7 +192,7 @@ CU	b2v_inst6(
 	defparam	b2v_inst6.mvat1 = 14;
 	defparam	b2v_inst6.mvr1 = 17;
 	defparam	b2v_inst6.mvt1 = 15;
-	defparam	b2v_inst6.nop1 = 24;
+	defparam	b2v_inst6.jmpz1 = 24;
 	defparam	b2v_inst6.st1 = 8;
 	defparam	b2v_inst6.st2 = 9;
 	defparam	b2v_inst6.st3 = 10;
