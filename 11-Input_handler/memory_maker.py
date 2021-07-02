@@ -94,17 +94,24 @@ k = int(input("Enter the maximum number of cores to be utilized: "))
 m = int(input("Enter the number of rows in mat A               : "))
 q = int(input("Enter the number of columns in mat A            : "))
 n = int(input("Enter the number of columns in mat B            : "))
+
+print("----------------------------------------------------------------")
     
 A = []
 for i in range(m):
     A.append(input("Enter the row " +str(i+1)+ " of mat A: ").split(" "))
     for j in range(q):
         A[i][j]='{0:016b}'.format(int(A[i][j]))
+
+print("----------------------------------------------------------------")
+
 B = []
 for i in range(q):
     B.append(input("Enter the row " +str(i+1)+ " of mat B: ").split(" "))
     for j in range(n):
         B[i][j]='{0:016b}'.format(int(B[i][j]))
+
+print("----------------------------------------------------------------")
 
 # main program
 lst = getIns("Instructions.txt")        
