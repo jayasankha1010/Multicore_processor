@@ -1,3 +1,5 @@
+//author - Chathura Jayasankha Gamage
+
 module tribuffer16
 (
 input [15:0] dataIN,
