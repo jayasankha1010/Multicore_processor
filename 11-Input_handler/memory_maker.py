@@ -1,3 +1,5 @@
+##Author - Thusara Dimuth
+
 def getIns(input_file):
     with open(input_file,"r")as Input:
         lst1=Input.readlines()
