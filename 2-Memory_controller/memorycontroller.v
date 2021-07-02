@@ -87,115 +87,101 @@ case(counter)
 		
 	3'd2: 
 		begin
-		if(addr1_>3499) 
+		if(addr2_>3499) 
 		begin
-			addr_ <= addr1_+2;
+			addr_ <= addr2_+2;
 		end
 		else
 		begin
-			addr_ <= addr1_;
+			addr_ <= addr2_;
 		end
 			
-		we_ <= we1_;
-		dataIN_ <= dataIN1_;
-		dataOUT1_ <= dataOUT_;
+		we_ <= we2_;
+		dataIN_ <= dataIN2_;
+		dataOUT2_ <= dataOUT_;
 		end
 		
 	3'd3: 
 		begin
-		if(addr1_>3499) 
+		if(addr3_>3499) 
 		begin
-			addr_ <= addr1_+3;
+			addr_ <= addr3_+3;
 		end
 		else
 		begin
-			addr_ <= addr1_;
+			addr_ <= addr3_;
 		end
 			
-		we_ <= we1_;
-		dataIN_ <= dataIN1_;
-		dataOUT1_ <= dataOUT_;
+		we_ <= we3_;
+		dataIN_ <= dataIN3_;
+		dataOUT3_ <= dataOUT_;
 		end
 		
 	3'd4: 
 		begin
-		if(addr1_>3499) 
+		if(addr4_>3499) 
 		begin
-			addr_ <= addr1_+4;
+			addr_ <= addr4_+4;
 		end
 		else
 		begin
-			addr_ <= addr1_;
+			addr_ <= addr4_;
 		end
 			
-		we_ <= we1_;
-		dataIN_ <= dataIN1_;
-		dataOUT1_ <= dataOUT_;
+		we_ <= we4_;
+		dataIN_ <= dataIN4_;
+		dataOUT4_ <= dataOUT_;
 		end
 	
-	3'd4: 
-		begin
-		if(addr1_>3499) 
-		begin
-			addr_ <= addr1_+4;
-		end
-		else
-		begin
-			addr_ <= addr1_;
-		end
-			
-		we_ <= we1_;
-		dataIN_ <= dataIN1_;
-		dataOUT1_ <= dataOUT_;
-		end
-		
 	3'd5: 
 		begin
-		if(addr1_>3499) 
+		if(addr5_>3499) 
 		begin
-			addr_ <= addr1_+5;
+			addr_ <= addr5_+5;
 		end
 		else
 		begin
 			addr_ <= addr1_;
 		end
 			
-		we_ <= we1_;
-		dataIN_ <= dataIN1_;
-		dataOUT1_ <= dataOUT_;
-		end
-	
-	3'd6: 
-		begin
-		if(addr1_>3499) 
-		begin
-			addr_ <= addr1_+6;
-		end
-		else
-		begin
-			addr_ <= addr1_;
-		end
-			
-		we_ <= we1_;
-		dataIN_ <= dataIN1_;
-		dataOUT1_ <= dataOUT_;
+		we_ <= we5_;
+		dataIN_ <= dataIN5_;
+		dataOUT5_ <= dataOUT_;
 		end
 		
-	3'd7: 
+	3'd6: 
 		begin
-		if(addr1_>3499) 
+		if(addr6_>3499) 
 		begin
-			addr_ <= addr1_+7;
+			addr_ <= addr6_+6;
 		end
 		else
 		begin
-			addr_ <= addr1_;
+			addr_ <= addr6_;
 		end
 			
-		we_ <= we1_;
-		dataIN_ <= dataIN1_;
-		dataOUT1_ <= dataOUT_;
+		we_ <= we6_;
+		dataIN_ <= dataIN6_;
+		dataOUT6_ <= dataOUT_;
 		end
+	
+	3'd7: 
+		begin
+		if(addr7_>3499) 
+		begin
+			addr_ <= addr7_+7;
+		end
+		else
+		begin
+			addr_ <= addr7_;
+		end
+			
+		we_ <= we7_;
+		dataIN_ <= dataIN7_;
+		dataOUT7_ <= dataOUT_;
+		end
+		
+
 		
 
 endcase
