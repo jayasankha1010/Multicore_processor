@@ -69,7 +69,7 @@ def getMat(lst,k,m,q,n,A,B):
             base_A.append('{0:016b}'.format(x1))
             base_C.append('{0:016b}'.format(x2))
         x1 += M[i]*q
-        x2 += M[i]*q
+        x2 += M[i]*n
     lst += base_A
     lst += base_C 
 
