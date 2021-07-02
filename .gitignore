@@ -1,0 +1,13 @@
+*.bak
+*.bdf
+*.bsf
+*.mpf
+*.mti
+*.qpf
+*.qsf
+*.qws
+*.wlf
+**/work
+**/db
+**/incremental_db
+**output_files
