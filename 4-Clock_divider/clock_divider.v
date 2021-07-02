@@ -2,19 +2,19 @@
 
 module clock_divider
 (
-input clk,
-output clk2
+input clkin,
+output clkout
 );
 
 reg [7:0] counter = 0;
 
-always @(posedge clk)
+always @(posedge clkin)
 begin
 
 counter<=counter+1;
 
 end
 
-assign  clk2 = counter[1];
+assign  clkout = counter[3];
 
 endmodule
