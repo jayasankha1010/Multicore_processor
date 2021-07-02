@@ -40,7 +40,7 @@ MVAR
 LDAC BaseC 3509
 ADD
 LD
-MVTR
+MVT
 ADD
 MVAT
 LDAC r 3541
@@ -78,14 +78,3 @@ SUB
 JPNZ alpha 10
 END
 END
-
-
-
-
-
-
-
-
-
-
-  
