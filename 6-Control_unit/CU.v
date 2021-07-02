@@ -19,8 +19,8 @@ reg [4:0] state = 0;
 
 parameter fetch1 = 0, fetch2 =1, fetch3 =2, stac1=3, stac2=4, ldac1=5, ldac2 =6, ldac3=7;
 parameter st1=8,st2=9,st3=10,ld1=11,ld2=12,ld3=13,mvat1=14,mvt1=15,mvar1=16,mvr1=17;
-parameter clac1=18,add1=19,sub1=20,mult1=21,inc1=22,jpnz1=23,nop1=24,END1=25;
-parameter branch=26;
+parameter clac1=18,add1=19,sub1=20,mult1=21,inc1=22,jpnz1=23,jmpz1=24,END1=25;
+parameter branch=26;//nop1=27;
 
 //always@(posedge resetCU)
 //begin
@@ -101,7 +101,7 @@ begin
 			11: state <= mult1;
 			12: state <= inc1;
 			13: state <= jpnz1;
-			14: state <= nop1;
+			14: state <= jmpz1;
 			15: state <= END1;
 		endcase
 
@@ -376,18 +376,48 @@ begin
 		end
 
 		end
-
-	nop1:
+		
+	jmpz1:
 		begin
-		ACselector 	<= 0; //to select whether BUS or the ALU loads the AC
-		ALUop		<= 0; //toselect the operation for the ALU
-		REGld		<= 8'b00000000; //Memoryin,ARld,PCld,DRld,IRld,TRld,Rld,ACld,
-		BUSld		<= 6'b000000; //Memoryout,PCbus,DRbus, TRbus,Rbus,ACbus,
-		MemWrite	<= 0; //toselect whether memory write or read
-		REGreset	<= 0; //reset the AC,reset the PC
-		REGinc		<= 0; // inc pc  
-		state		<= fetch1; //next state
+		
+		if(z)
+		begin
+			ACselector 	<= 0; //to select whether BUS or the ALU loads the AC
+			ALUop		<= 0; //toselect the operation for the ALU
+			REGld		<= 8'b00100000; //Memoryin,ARld,PCld,DRld,IRld,TRld,Rld,ACld,
+			BUSld		<= 6'b001000; //Memoryout,PCbus,DRbus, TRbus,Rbus,ACbus,
+			MemWrite	<= 0; //toselect whether memory write or read
+			REGreset	<= 0; //reset the AC,reset the PC
+			REGinc		<= 0; // inc pc  
+			state		<= fetch1; //next state
 		end
+
+		else
+		begin
+			ACselector 	<= 0; //to select whether BUS or the ALU loads the AC
+			ALUop		<= 0; //toselect the operation for the ALU
+			REGld		<= 8'b00000000; //Memoryin,ARld,PCld,DRld,IRld,TRld,Rld,ACld,
+			BUSld		<= 6'b000000; //Memoryout,PCbus,DRbus, TRbus,Rbus,ACbus,
+			MemWrite	<= 0; //toselect whether memory write or read
+			REGreset	<= 0; //reset the AC,reset the PC
+			REGinc		<= 0; // inc pc  
+			state		<= fetch1; //next state
+		end
+
+		end
+	
+	//will not be used
+	//nop1:
+		//begin
+		//ACselector 	<= 0; //to select whether BUS or the ALU loads the AC
+		//ALUop		<= 0; //toselect the operation for the ALU
+		//REGld		<= 8'b00000000; //Memoryin,ARld,PCld,DRld,IRld,TRld,Rld,ACld,
+		//BUSld		<= 6'b000000; //Memoryout,PCbus,DRbus, TRbus,Rbus,ACbus,
+		//MemWrite	<= 0; //toselect whether memory write or read
+		//REGreset	<= 0; //reset the AC,reset the PC
+		//REGinc		<= 0; // inc pc  
+		//state		<= fetch1; //next state
+		//end
 
 	END1:
 		begin
