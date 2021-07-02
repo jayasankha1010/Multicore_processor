@@ -67,7 +67,8 @@ case(counter)
 		addr_ <= addr0_;
 		we_ <= we0_;
 		dataIN_ <= dataIN0_;
-		dataOUT0_ <= dataOUT_;
+		//dataOUT0_ <= dataOUT_;
+		dataOUT6_ <= dataOUT_;
 		end
 	3'd1: 
 		begin
@@ -82,7 +83,8 @@ case(counter)
 			
 		we_ <= we1_;
 		dataIN_ <= dataIN1_;
-		dataOUT1_ <= dataOUT_;
+		//dataOUT1_ <= dataOUT_;
+		dataOUT7_ <= dataOUT_;
 		end
 		
 	3'd2: 
@@ -98,7 +100,8 @@ case(counter)
 			
 		we_ <= we2_;
 		dataIN_ <= dataIN2_;
-		dataOUT2_ <= dataOUT_;
+		//dataOUT2_ <= dataOUT_;
+		dataOUT0_ <= dataOUT_;
 		end
 		
 	3'd3: 
@@ -114,7 +117,8 @@ case(counter)
 			
 		we_ <= we3_;
 		dataIN_ <= dataIN3_;
-		dataOUT3_ <= dataOUT_;
+		//dataOUT3_ <= dataOUT_;
+		dataOUT1_ <= dataOUT_;
 		end
 		
 	3'd4: 
@@ -130,7 +134,8 @@ case(counter)
 			
 		we_ <= we4_;
 		dataIN_ <= dataIN4_;
-		dataOUT4_ <= dataOUT_;
+		//dataOUT4_ <= dataOUT_;
+		dataOUT2_ <= dataOUT_;
 		end
 	
 	3'd5: 
@@ -141,12 +146,13 @@ case(counter)
 		end
 		else
 		begin
-			addr_ <= addr1_;
+			addr_ <= addr5_;
 		end
 			
 		we_ <= we5_;
 		dataIN_ <= dataIN5_;
-		dataOUT5_ <= dataOUT_;
+		//dataOUT5_ <= dataOUT_;
+		dataOUT3_ <= dataOUT_;
 		end
 		
 	3'd6: 
@@ -162,7 +168,8 @@ case(counter)
 			
 		we_ <= we6_;
 		dataIN_ <= dataIN6_;
-		dataOUT6_ <= dataOUT_;
+		//dataOUT6_ <= dataOUT_;
+		dataOUT4_ <= dataOUT_;
 		end
 	
 	3'd7: 
@@ -178,7 +185,8 @@ case(counter)
 			
 		we_ <= we7_;
 		dataIN_ <= dataIN7_;
-		dataOUT7_ <= dataOUT_;
+		//dataOUT7_ <= dataOUT_;
+		dataOUT5_ <= dataOUT_;
 		end
 		
 
