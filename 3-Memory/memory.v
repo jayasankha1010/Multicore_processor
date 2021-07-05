@@ -8,14 +8,13 @@ output reg [Data_width-1:0] dout);
 
 reg [Data_width-1:0] ram [2**Addr_width-1:0];
 
-//initial begin
-//	$readmemb("D:\\Work_Parent\\Multicore Processor\\memorytest\\codes.txt",ram);
-//end
+initial begin
+	$readmemb("D:\\Work_Parent\\Octacore Processor\\11-Input_handler\\Memory_file.txt",ram);
+end
 
-
+/*
 initial 
 begin
-//read
 //instructions
 ram[0] = 16'b1110000000000000;
 ram[1] = 16'b1110000000000000;
@@ -145,13 +144,8 @@ ram[3909] = 0;
 ram[3910] = 0;
 ram[3911] = 0;
 
-
-
 end
-//
-
-
-
+*/
 
 always@(posedge clk)
 begin
