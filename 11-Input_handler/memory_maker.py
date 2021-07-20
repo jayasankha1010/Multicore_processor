@@ -120,4 +120,4 @@ lst2,k = getMat(lst,k,m,q,n,A,B)
 print("\n",k,"core(s) will be utilized for the computation")
 print("\n","Restart the simulation...")
 Output(lst2)
-
+x = input("Enter any key to end the program : ")
